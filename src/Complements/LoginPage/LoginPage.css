@@ -1,0 +1,71 @@
+.containerLogin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Asegura que el contenedor ocupe toda la altura de la ventana */
+}
+/* Wrapper que contiene el formulario */
+.wrapper {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+  width: 100%;
+  max-width: 400px; /* Ancho máximo */
+  margin: auto;
+}
+
+/* Encabezado del formulario */
+.form-signin-heading {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Estilo de los campos de entrada */
+.form-signin input.form-control {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0; /* Espaciado entre los campos */
+  border: 1px solid #ddd;
+  border-radius: 4px; /* Bordes redondeados */
+  box-sizing: border-box;
+  font-size: 16px;
+  color: #333;
+}
+
+/* Estilo para el campo de entrada cuando está en foco */
+.form-signin input.form-control:focus {
+  border-color: #4b9ed5; /* Color del borde cuando el campo está en foco */
+  outline: none; /* Eliminar el outline predeterminado */
+}
+
+/* Botón de login */
+.btn {
+  width: 100%;
+  padding: 10px;
+  font-size: 18px;
+  background-color: #4b9ed5; /* Color de fondo */
+  color: white;
+  border: none;
+  border-radius: 4px; /* Bordes redondeados */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Estilo del botón cuando el mouse pasa por encima */
+.btn:hover {
+  background-color: #357ab7; /* Color de fondo cuando el mouse está sobre el botón */
+}
+
+/* Agregar un borde fino cuando el formulario no está activo */
+.form-signin input.form-control, .btn {
+  outline: none;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+/* Agregar un efecto de "hover" en los campos */
+.form-signin input.form-control:hover {
+  box-shadow: 0 0 5px rgba(75, 158, 213, 0.5);
+}

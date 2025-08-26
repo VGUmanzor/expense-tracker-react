@@ -1,24 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
+import React, { useState } from 'react';
+import UserPage from './Complements/UserPage/UserPage';
+import LoginPage from './Complements/LoginPage/LoginPage';
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import TransactionManager from "./Complements/UserPage/UserPage";
 
-function App() {
+const App = () => {
+  const [token, setToken] = useState(null);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="main-body">
+        <Routes>
+          <Route path="/" element={<LoginPage setToken={setToken}/>} />
+          <Route path="/user" element={<TransactionManager authToken={token} />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
